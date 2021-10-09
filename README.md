@@ -20,3 +20,6 @@ void |
 
 *Explain the differences between function declaration-definition*
 
+* The definition of an element of the program, determines the value associated with that element. In other part, the declaration of a program element specifies its name and type to the compiler.
+* The definition reserve a certain amount of memory, while the declaration doesn`t imply memory allocation.
+* 
