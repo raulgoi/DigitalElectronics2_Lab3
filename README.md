@@ -36,3 +36,6 @@ void | |  | specifies that the function does not return a value |
 
 ## Scheme
 
+
+![Lab 3](https://user-images.githubusercontent.com/91128806/136802316-e2b1224e-d1b7-4f4c-8a3a-26c08037d41d.png)
+
