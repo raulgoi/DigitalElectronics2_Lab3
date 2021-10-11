@@ -28,6 +28,18 @@ void | |  | specifies that the function does not return a value |
 
 ## Code C++
 
+    // Configure Push button at port D and enable internal pull-up resistor
+    // WRITE YOUR CODE HERE
+    
+
+    // Infinite loop
+    while (1)
+    {
+        // Pause several milliseconds
+        _delay_ms(BLINK_DELAY);
+
+        // WRITE YOUR CODE HERE
+    }
 
 
 
