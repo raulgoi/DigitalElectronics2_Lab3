@@ -30,6 +30,15 @@ void | |  | specifies that the function does not return a value |
 
     // Configure Push button at port D and enable internal pull-up resistor
     // WRITE YOUR CODE HERE
+    #include <util/delay.h>
+    #include <avr/io.h>
+    #include "gpio.h"
+    
+    #define LED  PB5 1
+    #define Buttom PD5
+    #define BLINK_DELAY 500
+    #ifndef F_CPU
+    #define F_CPU 16000000
     
 
     // Infinite loop
@@ -38,13 +47,15 @@ void | |  | specifies that the function does not return a value |
         // Pause several milliseconds
         _delay_ms(BLINK_DELAY);
 
-        // WRITE YOUR CODE HERE
-    }
-
-
-
-
-
+        void GPIO_write_toggle(volatile uint8_t *reg_name, uint8_t pin_num)
+{
+    * reg_name = * reg_name * (1<<pin_num);
+   }
+        }
+ return 1;
+   else {
+   return 0;
+   }
 
 ## Scheme
 
