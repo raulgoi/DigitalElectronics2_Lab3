@@ -39,17 +39,25 @@ void | |  | specifies that the function does not return a value |
     #define BLINK_DELAY 500
     #ifndef F_CPU
     #define F_CPU 16000000
-    
+    int main(void)
+    {
+      // Green LED at port B
+      GPIO_config_output(&DDRB, LED_GREEN);
+      GPIO_write_low(&PORTB, LED_GREEN);
+      
+      // Configure the second LED at port C
+      GPIO_config_input_nopullup(volatile uint8_t *LED2, UNIT8_T PORTC)
+      
+      // Configure Push button at port D and enable internal pull-up resistor
+      GPIO_conig_input_nopullup(volatile uint_t *PUSH_BUTTON, uint8_t PORTD)
 
     // Infinite loop
     while (1)
     {
-        // Pause several milliseconds
+     
+     // Pause several milliseconds
         _delay_ms(BLINK_DELAY);
-
-        void GPIO_write_toggle(volatile uint8_t *reg_name, uint8_t pin_num)
-{
-    * reg_name = * reg_name * (1<<pin_num);
+     
    }
         }
  return 1;
